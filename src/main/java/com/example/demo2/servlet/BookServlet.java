@@ -24,9 +24,9 @@ public class BookServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Gson gson = new Gson();
         String responseString = gson.toJson(bookService.getAllBooks());
-        PrintWriter printWriter = resp.getWriter();
-        printWriter.print(responseString);
-        printWriter.flush();
+           PrintWriter printWriter = resp.getWriter();
+            printWriter.print(responseString);
+            printWriter.flush();
     }
 
     @Override
